@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Maram-web/discovery.git'
+                git branch: 'discovery', url: 'https://github.com/Maram-web/discovery.git'
             }
         }
 
