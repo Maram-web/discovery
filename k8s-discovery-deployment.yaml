@@ -30,7 +30,7 @@ metadata:
   name: discovery-service
   namespace: discovery
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: discovery-service
   ports:
