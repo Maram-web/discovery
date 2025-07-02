@@ -36,5 +36,6 @@ spec:
   ports:
     - port: 8761
       targetPort: 8761
+      nodePort: 30011
 
-#      nodePort: 30092  # ⬅ Accès via http://<VM_IP>:30092
+#      nodePort: 30092  # ⬅ Accès via http://<VM_IP>:30092(doit être entre 30000–32767)
