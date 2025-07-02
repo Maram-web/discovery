@@ -8,8 +8,6 @@ kind: Deployment
 metadata:
   name: discovery-service
   namespace: discovery
-  labels:
-    app: discovery-service
 spec:
   replicas: 1
   selector:
@@ -32,10 +30,11 @@ metadata:
   name: discovery-service
   namespace: discovery
 spec:
-  type: NodePort  # ⬅ Pour y accéder depuis l’extérieur (navigateur)
+  type: ClusterIP
   selector:
     app: discovery-service
   ports:
     - port: 8761
       targetPort: 8761
+
 #      nodePort: 30092  # ⬅ Accès via http://<VM_IP>:30092
